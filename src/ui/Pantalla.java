@@ -4,6 +4,9 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import logica.Procesos;
+
 /**
  *
  * @author Nicolas
@@ -26,21 +29,152 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        btnIngresarNumeros = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        btnRellenarVectorAleatorio = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        lbVectorIngresadoString = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lbVectorAleatorio = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Ej: uno, tres, cinco, siete, dos nueve");
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("2. Rellenar vector con valores aleatorios");
+
+        btnIngresarNumeros.setText("Ingresar");
+        btnIngresarNumeros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarNumerosActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("1. Ingrese 5 numeros en minuscula entre (1 - 10).");
+
+        btnRellenarVectorAleatorio.setText("Rellenar");
+        btnRellenarVectorAleatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRellenarVectorAleatorioActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Vector ingresado: ");
+
+        lbVectorIngresadoString.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lbVectorIngresadoString.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Vector aleatorio: ");
+
+        lbVectorAleatorio.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lbVectorAleatorio.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbVectorAleatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(lbVectorIngresadoString, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnRellenarVectorAleatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIngresarNumeros, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnIngresarNumeros)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRellenarVectorAleatorio)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lbVectorIngresadoString, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lbVectorAleatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIngresarNumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarNumerosActionPerformed
+
+        Procesos.ingresarNumerosString();
+
+        Procesos.pasarDatosStringAVectorInt();
+
+        String numerosSTRING = "";
+
+        for (int i = 0; i < Procesos.numerosIngresados.length; ++i) {
+            numerosSTRING += Procesos.numerosIngresados[i] + " ";
+        }
+
+        lbVectorIngresadoString.setText("[ " + numerosSTRING + " ]");
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresarNumerosActionPerformed
+
+    private void btnRellenarVectorAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRellenarVectorAleatorioActionPerformed
+        Procesos.llenarAleatoriosVector();
+        JOptionPane.showMessageDialog(null, "Vector rellenado aleatoriamente!");
+        
+        String valoresAleatorios = "";
+        
+        for (int i = 0; i < Procesos.numsAleatorios.length; ++i) {
+            valoresAleatorios += Procesos.numsAleatorios[i] + " ";
+        }
+        
+        lbVectorAleatorio.setText("[ " + valoresAleatorios + " ]");
+        
+        
+    }//GEN-LAST:event_btnRellenarVectorAleatorioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +212,15 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresarNumeros;
+    private javax.swing.JButton btnRellenarVectorAleatorio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbVectorAleatorio;
+    private javax.swing.JLabel lbVectorIngresadoString;
     // End of variables declaration//GEN-END:variables
 }
